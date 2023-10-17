@@ -55,6 +55,7 @@ public class ProductService implements ProductsApiDelegate {
                 .createdAt(new Date().toString())
                 .build();
         productRepository.save(product);
+        productDTO.setId(product.getId());
         productDTO.setCreatedAt(new Date().toString());
         return ResponseEntity.ok(productDTO);
     }

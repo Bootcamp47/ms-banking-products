@@ -94,8 +94,6 @@ components:
           type: string
         productType:
           type: string
-        name:
-          type: string
         productCategory:
           type: string
         state:
