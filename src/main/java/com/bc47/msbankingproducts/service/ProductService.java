@@ -33,7 +33,7 @@ public class ProductService implements ProductsApiDelegate {
     }
 
     @Override
-    public ResponseEntity<ProductDTO> retrieveProduct(Long id) {
+    public ResponseEntity<ProductDTO> retrieveProduct(String id) {
         List<Product> products = productRepository.findAll();
         Optional<ProductDTO> productFound =
                 products
@@ -65,7 +65,7 @@ public class ProductService implements ProductsApiDelegate {
     }
 
     @Override
-    public ResponseEntity<ProductDTO> deleteProduct(Long id) {
+    public ResponseEntity<ProductDTO> deleteProduct(String id) {
         List<Product> products = productRepository.findAll();
         Optional<ProductDTO> productFound =
                 products
